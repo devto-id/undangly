@@ -47,8 +47,7 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-white">
-        @include('components.organisms.navbar')
-        <main class="pt-[72px]">
+        <main>
             {{ $slot }}
         </main>
     </div>

@@ -1,163 +1,131 @@
 <x-app-layout>
-    <section class="py-12">
+
+    <section class="bg-gradient-to-tr from-white via-primary-50 to-yellow-50 ">
         <x-atoms.wrapper>
-            <div class="flex flex-col-reverse md:flex-col gap-12">
-                <div class="flex flex-col gap-6">
-                    <h1 class="text-center text-4xl md:text-6xl w-full leading-[1.4] md:leading-[1.4] font-medium">
-                        Undangan Digital:
-                        <br>
-                        Buat dulu, <strong class="font-black">bayar</strong> kemudian
+            <div class="py-[180px]">
+                <div class="md:w-[80%] mx-auto flex flex-col items-center">
+                    <h1 class="text-center font-extrabold text-4xl md:text-6xl leading-[1.2] md:leading-[1.2] mb-5">
+                        Publikasikan undangan digital dalam 5 menit tanpa coding.
                     </h1>
 
-                    <div class="flex justify-center">
-                        <a href="https://app.undangly.com"
-                            class="bg-primary-600 hover:bg-primary-700 cursor-pointer md:text-lg font-bold text-white px-6 py-3 rounded-full shadow-lg shadow-primary-100">
-                            Buat Undangan
-                        </a>
-                    </div>
-                </div>
+                    <p class="text-center leading-[1.5] text-gray-600 text-lg md:w-[85%] mb-10">
+                        Dengan builder canggih kami, Anda dapat membuat undangan digital yang menarik dan elegan tanpa
+                        ribet
+                        dan cepat.
+                    </p>
 
-                <div class="w-full">
-                    <img src="/images/demo.png"
-                        class="w-full rounded-lg border-[8px] shadow-lg shadow-gray-50 border-gray-200 mx-auto" />
+                    <a href=""
+                        class="inline-flex px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-700 duration-300 font-semibold">
+                        Coba sekarang
+                    </a>
                 </div>
             </div>
-
-
         </x-atoms.wrapper>
+    </section>
 
+    <section class="mt-[-60px]">
+        <x-atoms.wrapper>
+            <div>
+                <video src="{{ url('/demo.mp4') }}" autoplay muted loop
+                    class="rounded-xl bg-white w-full shadow "></video>
+            </div>
+        </x-atoms.wrapper>
     </section>
 
 
-    <section class="py-14">
+    <section class="mt-[120px]">
         <x-atoms.wrapper>
-            <h2 class="text-4xl md:text-5xl text-center font-semibold">
-                Ratusan Template Undangan
-            </h2>
+            <div>
+                <h2 class="text-4xl font-extrabold text-center mb-10">
+                    Dipercaya oleh ratusan pengguna.
+                </h2>
 
-            <p class="text-center mt-5">
-                Pilih template undangan yang sesuai dengan tema acara kamu
-            </p>
-        </x-atoms.wrapper>
-
-        <div class="swiper mySwiper mt-10">
-            <div class="swiper-wrapper">
-                @for ($i = 0; $i < 10; $i++)
-                    <div class="swiper-slide">
-                        <div class="px-2">
-                            <div class="rounded-lg w-full aspect-square bg-gray-50 overflow-hidden shadow-lg">
-                                <img src="https://picsum.photos/800/600?random={{ $i }}"
-                                    class="object-cover h-full w-full" />
+                <div class="relative" x-data="{ open: false }">
+                    <div
+                        x-bind:class="open ? 'grid grid-cols-1 md:grid-cols-3 gap-3' :
+                            'grid grid-cols-1 md:grid-cols-3 gap-3 max-h-[700px] overflow-hidden'">
+                        @for ($i = 0; $i < 100; $i++)
+                            <div class="flex flex-col bg-slate-100 p-4">
+                                <p class="font-semibold mb-2">
+                                    {{ fake('id_ID')->name }}
+                                </p>
+                                <p>
+                                    {{ fake('id_ID')->paragraph }}
+                                </p>
                             </div>
-                        </div>
+                        @endfor
                     </div>
-                @endfor
+
+                    <template x-if="!open">
+                        <div
+                            class="inset-x-0 z-[2] bottom-0 flex justify-center bg-gradient-to-t from-white pt-32 pb-8  absolute">
+                            <button type="button" x-on:click="open = !open"
+                                class="inline-flex px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-700 duration-300 font-semibold">
+                                Lihat semua ...
+                            </button>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </x-atoms.wrapper>
+    </section>
+
+    <section class="mt-[120px] ">
+        <x-atoms.wrapper>
+            <div>
+                <h2 class="text-4xl font-extrabold text-center mb-10">
+                    Ratusan tema undangan premium
+                </h2>
+            </div>
+
+        </x-atoms.wrapper>
+        <div class="flex flex-col gap-2 relative">
+            <div class="flex gap-2 justify-center overflow-x-hidden">
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/galungan/galungan.webp" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/bonvoyage/bonvoyage.webp" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/colored-beach/colored-beach.webp" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/pelantikan-dewan/pelantikan-dewan.webp" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/betawi-vintage/betawi-vintage.jpg" />
+
+            </div>
+
+            <div class="flex gap-2 justify-center overflow-x-hidden ml-[-25vw]">
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/sakura-castle/sakura-castle.jpg" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/wisuda-harmoni/wisuda-harmoni.jpg" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/purple-marble/purple-marble.jpg" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/minimalist-blue/minimalist-blue.jpg" />
+                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                    src="https://satumomen.com/themes/maroon-and-blue/maroon-and-blue.jpg" />
+
+            </div>
+
+            <div
+                class="absolute z-[2] left-[50%] top-[50%] translate-x-[-50%] transalte-y-[-50%] shadow-[0_0_20px_20px__rgba(255,255,255,1)]  md:shadow-[0_0_50px_50px__rgba(255,255,255,1)] rounded-xl">
+                <button type="button"
+                    class="inline-flex px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-700 duration-300 font-semibold">
+                    Jelajahi tema
+                </button>
             </div>
         </div>
-
-
-        <div class="flex justify-center mt-10">
-            <a
-                class="bg-primary-600 hover:bg-primary-700 cursor-pointer md:text-lg font-bold text-white px-6 py-3 rounded-full shadow-lg shadow-primary-100">
-                Lihat Semua Template
-            </a>
-        </div>
     </section>
 
-    <section class="py-14 bg-neutral-100">
+    <footer>
         <x-atoms.wrapper>
-            <div class="flex flex-col-reverse md:flex-row gap-14 md:gap-16">
-                <div class="md:w-6/12 md:mt-16">
-                    <h2 class="text-4xl md:text-5xl text-start mb-10 font-semibold leading-[1.4] md:leading-[1.4]">
-                        Ratusan Background Music Tersedia
-                    </h2>
-                    <p class="text-lg leading-[1.6]">
-                        Dengan ratusan background music yang tersedia, kamu bisa memilih background music yang sesuai
-                        dengan
-                        tema
-                        acara kamu. Kamu juga bisa mengupload background music sendiri.
-                    </p>
-                </div>
-
-                <div class="md:w-6/12">
-                    <img src="/images/video.png" class="" />
-                </div>
+            <div class="flex flex-col items-center py-10">
+                <p class="text-center text-gray-600">
+                    © 2024 Undangly. All rights reserved.
+                </p>
             </div>
-
-        </x-atoms.wrapper>
-    </section>
-
-    <section class="py-14">
-        <x-atoms.wrapper>
-            <div class="flex flex-col md:flex-row gap-14 md:gap-16">
-
-
-                <div class="md:w-6/12">
-                    <img src="/images/non-profit.png" class="" />
-                </div>
-                <div class="md:w-6/12 md:mt-20">
-                    <h2 class="text-4xl md:text-5xl text-start mb-10 font-semibold leading-[1.4] md:leading-[1.4]">
-                        Undang tamu sebanyak-banyaknya
-                    </h2>
-                    <p class="text-lg leading-[1.6]">
-                        Undang semua orang yang kamu kenal dalam acara kamu tanpa khawatir tentang batasan jumlah
-                        peserta atau biaya tambahan.
-                    </p>
-                </div>
-            </div>
-
-        </x-atoms.wrapper>
-    </section>
-
-
-    <section class="py-14 ">
-        <x-atoms.wrapper>
-            <div class="flex flex-col-reverse md:flex-row gap-14 md:gap-16">
-                <div class="md:w-6/12 md:mt-16">
-                    <h2 class="text-4xl md:text-5xl text-start mb-10 font-semibold leading-[1.4] md:leading-[1.4]">
-                        Terima Kado & Ucapan Digital
-                    </h2>
-                    <p class="text-lg leading-[1.6]">
-                        Dengan Undangly, kamu bisa dengan mudah menerima kado digital dan ucapan selamat dari tamu
-                        undanganmu, menambah keseruan acara dan memberikan kenangan yang berkesan.
-                    </p>
-                </div>
-
-                <div class="md:w-6/12">
-                    <img src="/images/present.png" class="" />
-                </div>
-            </div>
-
-        </x-atoms.wrapper>
-    </section>
-
-    <footer class="py-14">
-        <x-atoms.wrapper>
-            <p class="text-sm text-neutral-400">
-                Copyright &copy; 2024 Undangly
-            </p>
         </x-atoms.wrapper>
     </footer>
 
-    <x-slot name="styles">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    </x-slot>
-
-    <x-slot name="scripts">
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 2,
-                spaceBetween: 0,
-
-                breakpoints: {
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                    },
-                },
-            });
-        </script>
-    </x-slot>
 </x-app-layout>
