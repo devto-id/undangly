@@ -222,7 +222,7 @@
         <x-atoms.wrapper>
             <div>
                 <h2 class="text-4xl font-extrabold text-center mb-10">
-                    Ratusan tema undangan premium
+                    Ratusan tema undangan berkelas.
                 </h2>
             </div>
 
