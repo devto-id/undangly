@@ -305,7 +305,7 @@
 
 
 
-    <footer>
+    <footer class="mt-[60px]">
         <x-atoms.wrapper>
             <div class="flex flex-col items-center py-10">
                 <p class="text-center text-gray-600">
