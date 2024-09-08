@@ -8,8 +8,20 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="description"
-        content="Undangly memberikan kemudahan dalam membuat undangan digital yang menarik dan elegan. Dengan fitur-fitur yang lengkap, kamu bisa membuat undangan digital dalam hitungan menit dengan biaya yang sangat terjangkau.">
+    <meta name="description" content="{{ config('seo.description') }}">
+    <meta name="og:description" content="{{ config('seo.description') }}">
+    <meta name="twitter:description" content="{{ config('seo.description') }}">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@undangly" />
+    <meta name="twitter:image" content="/favicons/social-card-large.png" />
+    <meta name="twitter:creator" content="@undangly" />
+    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/favicons/social-card-large.png" />
+
+    <meta name="twitter:title" content="{{ config('seo.title') }}" />
+    <meta property="og:title" content="{{ config('seo.title') }}" />
 
     <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
@@ -32,7 +44,7 @@
     <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('seo.title') }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />

@@ -1,12 +1,33 @@
 <x-app-layout>
 
+
     <div class="bg-gradient-to-tr from-green-50 via-gray-50 to-primary-100">
 
         <div class="bg-grid">
+            <div class="w-[90%] mx-auto py-4 md:py-8 flex items-center justify-between">
+                <x-atoms.logo-full class="h-[42px]"></x-atoms.logo-full>
+
+                <div class="hidden md:flex items-center gap-4">
+
+                    <a href="https://app.undangly.com/theme" class="text-sm font-semibold hover:text-primary py-2 px-2">
+                        Tema Undangan
+                    </a>
+
+                    <a href="https://app.undangly.com/login" class="text-sm font-semibold hover:text-primary py-2 px-2">
+                        Masuk
+                    </a>
+
+                    <a href="https://app.undangly.com/register"
+                        class="text-sm font-semibold hover:text-primary py-2 px-2">
+                        Daftar
+                    </a>
+                </div>
+            </div>
+
 
             <section class="">
                 <x-atoms.wrapper>
-                    <div class="py-[180px]">
+                    <div class="pb-[180px] pt-[80px]">
                         <div class="md:w-[80%] mx-auto flex flex-col items-center">
                             <h1
                                 class="text-center font-extrabold text-4xl md:text-6xl leading-[1.2] md:leading-[1.2] mb-5">
@@ -20,7 +41,7 @@
                                 dan cepat.
                             </p>
 
-                            <a href=""
+                            <a href="https://app.undangly.com/register"
                                 class="inline-flex px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-700 duration-300 font-semibold">
                                 Coba sekarang
                             </a>
@@ -258,10 +279,10 @@
 
             <div
                 class="absolute z-[2] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] shadow-[0_0_20px_20px__rgba(255,255,255,1)]  md:shadow-[0_0_50px_50px__rgba(255,255,255,1)] rounded-xl">
-                <button type="button"
+                <a href="https://app.undangly.com/theme"
                     class="inline-flex px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-700 duration-300 font-semibold">
                     Jelajahi tema
-                </button>
+                </a>
             </div>
         </div>
     </section>
