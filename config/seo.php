@@ -1,6 +1,6 @@
 <?php
 
 return [
-    "description" => "Undangly memberikan kemudahan dalam membuat undangan digital yang menarik dan elegan. Dengan fitur-fitur yang lengkap, kamu bisa membuat undangan digital dalam hitungan menit dengan biaya yang sangat terjangkau.",
+    "description" => "Undangly memudahkan pembuatan undangan digital elegan dan menarik dengan fitur lengkap, cepat, dan biaya terjangkau.",
     "title" => "Undangly: Publikasikan undangan digital dalam 5 menit tanpa coding."
 ];
