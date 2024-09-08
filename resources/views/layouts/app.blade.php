@@ -14,11 +14,11 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@undangly" />
-    <meta name="twitter:image" content="{{ url('/favicons/social-card-large.png') }}" />
+    <meta name="twitter:image" content="{{ url('/favicons/social-card-large-compressed.png') }}" />
     <meta name="twitter:creator" content="@undangly" />
     <meta property="og:url" content="{{ url('/') }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="{{ url('/favicons/social-card-large.png') }}" />
+    <meta property="og:image" content="{{ url('/favicons/social-card-large-compressed.png') }}" />
 
     <meta name="twitter:title" content="{{ config('seo.title') }}" />
     <meta property="og:title" content="{{ config('seo.title') }}" />
