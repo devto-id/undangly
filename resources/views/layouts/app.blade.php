@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta name="description" content="{{ config('seo.description') }}">
-    <meta name="og:description" content="{{ config('seo.description') }}">
+    <meta property="og:description" content="{{ config('seo.description') }}">
     <meta name="twitter:description" content="{{ config('seo.description') }}">
 
     <meta name="twitter:card" content="summary_large_image" />
