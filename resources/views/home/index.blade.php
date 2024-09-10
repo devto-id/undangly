@@ -298,16 +298,16 @@
                     <div
                         x-bind:class="open ? 'grid grid-cols-1 md:grid-cols-3 gap-3' :
                             'grid grid-cols-1 md:grid-cols-3 gap-4 max-h-[700px] overflow-hidden'">
-                        @for ($i = 0; $i < 100; $i++)
+                        @foreach ($reviews as $review)
                             <div class="flex flex-col bg-slate-100 p-4 rounded-xl">
                                 <p class="font-semibold mb-2">
-                                    {{ fake('id_ID')->name }}
+                                    {{ $review->name }}
                                 </p>
                                 <p>
-                                    {{ fake('id_ID')->paragraph }}
+                                    {{ $review->comment }}
                                 </p>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
 
                     <template x-if="!open">
