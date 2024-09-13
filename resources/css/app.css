@@ -11,3 +11,10 @@
     background-size: 2.5rem 2.5rem;
     background-position: center center;
 }
+
+.icon{
+    transition: .3s all;
+}
+.contact-link:hover .icon{
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.5);
+}
