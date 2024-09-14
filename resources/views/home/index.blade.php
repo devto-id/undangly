@@ -326,7 +326,7 @@
 
 
 
-    <footer class="mt-[60px]">
+    <footer class="mt-[60px] overflow-x-hidden">
         <x-atoms.wrapper>
             <div class="flex max-[590px]:flex-wrap">
                 <div class="payment-method min-w-[50%] max-w-[100%] m-5">
@@ -334,46 +334,60 @@
                         <h2>Metode Pembayaran :</h2>
                     </div>
                     <div class="content flex flex-wrap">
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/visa.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/mastercard.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/mandiri.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/bca.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/bni.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/permata.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[20px]" src="payment-logo/bri.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/gopay.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/atm.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/ovo.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/shopee.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[25px]" src="payment-logo/dana.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/linkaja.png" alt="payment-logo">
                         </div>
-                        <div class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
+                        <div
+                            class="payment-logo w-[50px] h-[50px] mr-6 mt-6 p-[5px] flex items-center justify-center rounded-full bg-gray-200">
                             <img class="w-[30px]" src="payment-logo/alfamart.png" alt="payment-logo">
                         </div>
                     </div>
@@ -384,32 +398,41 @@
                     </div>
                     <div class="content flex flex-wrap">
                         <div class="sosmed mt-6 min-w-[50%]">
-                            <a class="contact-link flex items-center" href="https://wa.me/6285718823638" target="blank_">
-                                <div class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-3xl bg-gray-200">
+                            <a class="contact-link flex items-center" href="https://wa.me/6285718823638"
+                                target="blank_">
+                                <div
+                                    class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-3xl bg-gray-200">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </div>
                                 <p>+62-857-1882-3638</p>
                             </a>
                         </div>
                         <div class="sosmed mt-6 min-w-[50%]">
-                            <a class="contact-link flex items-center" href="https://www.instagram.com/undangly.app?utm_source=qr" target="blank_">
-                                <div class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-3xl bg-gray-200">
+                            <a class="contact-link flex items-center"
+                                href="https://www.instagram.com/undangly.app?utm_source=qr" target="blank_">
+                                <div
+                                    class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-3xl bg-gray-200">
                                     <i class="fa-brands fa-instagram"></i>
                                 </div>
                                 <p>@undangly.app</p>
                             </a>
                         </div>
                         <div class="sosmed mt-6 min-w-[50%]">
-                            <a class="contact-link flex items-center" href="https://mail.google.com/mail/?view=cm&fs=1&to=undangly.app@gmail.com" target="blank_">
-                                <div class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-2xl bg-gray-200">
+                            <a class="contact-link flex items-center"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=undangly.app@gmail.com"
+                                target="blank_">
+                                <div
+                                    class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-2xl bg-gray-200">
                                     <i class="fa-regular fa-envelope"></i>
                                 </div>
                                 <p>undangly.app@gmail.com</p>
                             </a>
                         </div>
                         <div class="sosmed mt-6 min-w-[50%]">
-                            <a class="contact-link flex items-center" href="https://www.facebook.com/profile.php?id=61565833948636" target="blank_">
-                                <div class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-2xl bg-gray-200">
+                            <a class="contact-link flex items-center"
+                                href="https://www.facebook.com/profile.php?id=61565833948636" target="blank_">
+                                <div
+                                    class="icon w-[50px] h-[50px] mr-4 rounded-full flex items-center justify-center text-2xl bg-gray-200">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </div>
                                 <p>Undangly App</p>
