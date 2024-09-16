@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Invitation;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class InvitationController extends Controller
 {
     public function index($slug)
     {
+        Carbon::setLocale('id');
+
         $invitation = Invitation::where([
             'slug' => $slug,
             'status' => 'published'
@@ -44,6 +47,15 @@ class InvitationController extends Controller
 
         $newTitle = "{$invitation->invitable->groom_name} & {$invitation->invitable->bride_name}";
         $newDescription = "Undangan pernikahan {$invitation->invitable->groom_name} & {$invitation->invitable->bride_name}";
+
+        if ($invitation->invitable->reception_date) {
+            $newDescription .= " pada tanggal " . Carbon::parse($invitation->invitable->reception_date)->format('d F Y');
+        }
+
+        if ($invitable->invitable->reception_address) {
+            $newDescription .= " di " . $invitation->invitable->reception_address;
+        }
+
         $banner  = $invitation->invitable->cover ?? url('/favicons/social-card-large-compressed.png');
 
         // set title
