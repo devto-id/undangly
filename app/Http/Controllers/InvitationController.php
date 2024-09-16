@@ -52,7 +52,7 @@ class InvitationController extends Controller
             $newDescription .= " pada tanggal " . Carbon::parse($invitation->invitable->reception_date)->format('d F Y');
         }
 
-        if ($invitable->invitable->reception_address) {
+        if ($invitation->invitable->reception_address) {
             $newDescription .= " di " . $invitation->invitable->reception_address;
         }
 
