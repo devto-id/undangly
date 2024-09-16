@@ -59,11 +59,13 @@ class InvitationController extends Controller
             $html = preg_replace('/<\/head>/i', '<meta name="description" content="' . $newDescription . '"></head>', $html);
         }
 
+        $dataApiUrl =  "https://app.undangly.com/api/v1/invitation/{$invitation->id}";
+
         // set invitation id
         if (preg_match('/<body[^>]*\sdata-u="[^"]*"/', $html)) {
-            $html = preg_replace('/(<body[^>]*\s)data-u="[^"]*"/', '$1data-u="' . base64_encode(url("api/v1/invitation/$invitation->id")) . '"', $html);
+            $html = preg_replace('/(<body[^>]*\s)data-u="[^"]*"/', '$1data-u="' . base64_encode($dataApiUrl) . '"', $html);
         } else {
-            $html = preg_replace('/<body([^>]*)>/', '<body$1 data-u="' . base64_encode(url("api/v1/invitation/$invitation->id")) . '">', $html);
+            $html = preg_replace('/<body([^>]*)>/', '<body$1 data-u="' . base64_encode($dataApiUrl) . '">', $html);
         }
 
         return response($html)
