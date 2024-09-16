@@ -185,9 +185,6 @@ class InvitationController extends Controller
             $html = preg_replace('/<body([^>]*)>/', '<body$1 data-u="' . base64_encode($dataApiUrl) . '">', $html);
         }
 
-        // SEO
-
-
         return response($html)
             ->header('Content-Type', 'text/html');
     }
