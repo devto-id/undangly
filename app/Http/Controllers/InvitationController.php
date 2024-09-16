@@ -45,16 +45,19 @@ class InvitationController extends Controller
             $html = preg_replace('/<head>/i', '<head><base href="' . $baseUrl . '">', $html);
         }
 
-        $newTitle = "{$invitation->invitable->groom_name} & {$invitation->invitable->bride_name}";
-        $newDescription = "Undangan pernikahan {$invitation->invitable->groom_name} & {$invitation->invitable->bride_name}";
+        $newTitle = "Undangan Pernikahan {$invitation->invitable->groom_nickname} & {$invitation->invitable->bride_nickname}";
+        $newDescription = [];
 
         if ($invitation->invitable->reception_date) {
-            $newDescription .= " pada tanggal " . Carbon::parse($invitation->invitable->reception_date)->format('d F Y');
+            $newDescription[] = Carbon::parse($invitation->invitable->reception_date)->translatedFormat('l') . ',';
+            $newDescription[] =  Carbon::parse($invitation->invitable->reception_date)->format('d F Y');
         }
 
         if ($invitation->invitable->reception_address) {
-            $newDescription .= " di " . $invitation->invitable->reception_address;
+            $newDescription[] = "di " . $invitation->invitable->reception_address;
         }
+
+        $newDescription = implode(' ', $newDescription);
 
         $banner  = $invitation->invitable->cover ?? url('/favicons/social-card-large-compressed.png');
 
