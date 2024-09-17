@@ -13,6 +13,10 @@
                         Tema Undangan
                     </a>
 
+                    <a href="/contact" class="text-sm font-semibold hover:text-primary py-2 px-2">
+                        Kontak
+                    </a>
+
                     <a href="https://app.undangly.com/login" class="text-sm font-semibold hover:text-primary py-2 px-2">
                         Masuk
                     </a>

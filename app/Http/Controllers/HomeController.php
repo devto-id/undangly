@@ -13,4 +13,11 @@ class HomeController extends Controller
             "reviews" => Review::take(30)->get()
         ]);
     }
+
+    public function contact()
+    {
+        return view(
+            'contact/contact'
+        );
+    }
 }
