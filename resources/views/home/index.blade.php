@@ -8,6 +8,9 @@
                 <x-atoms.logo-full class="h-[42px]"></x-atoms.logo-full>
 
                 <div class="hidden md:flex items-center gap-4">
+                    <a href="/" class="text-sm font-semibold hover:text-primary py-2 px-2">
+                        Beranda
+                    </a>
 
                     <a href="https://app.undangly.com/theme" class="text-sm font-semibold hover:text-primary py-2 px-2">
                         Tema Undangan
