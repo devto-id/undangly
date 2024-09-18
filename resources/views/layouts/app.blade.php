@@ -62,6 +62,104 @@
         <main>
             {{ $slot }}
         </main>
+
+        @php
+            $payments = [
+                url('images/payments/visa.png'),
+                url('images/payments/mastercard.png'),
+                url('images/payments/atm.png'),
+                url('images/payments/bca.png'),
+                url('images/payments/bni.png'),
+                url('images/payments/bri.png'),
+                url('images/payments/dana.png'),
+                url('images/payments/gopay.png'),
+                url('images/payments/linkaja.png'),
+                url('images/payments/mandiri.png'),
+                url('images/payments/ovo.png'),
+                url('images/payments/permata.png'),
+                url('images/payments/shopee.png'),
+                url('images/payments/alfamart.png'),
+            ];
+        @endphp
+
+        <footer class="py-20">
+            <x-atoms.wrapper>
+                <div class="flex flex-col md:flex-row gap-10 md:gap-0">
+                    <div class="md:w-[50%] lg:w-[60%] md:pr-4">
+                        <p class="font-bold mb-4">Tentang Undangly</p>
+                        <p class="text-gray-500 leading-[1.8]">
+                            Undangly adalah platform undangan digital yang memungkinkan pengguna untuk
+                            membuat undangan yang elegan dan profesional dengan mudah. Tanpa perlu memiliki keahlian
+                            teknis, pengguna dapat menyesuaikan desain, menambahkan detail acara, serta membagikan
+                            undangan secara online melalui berbagai saluran. Undangly memberikan solusi praktis dan
+                            modern bagi siapa pun yang ingin menghemat waktu dalam membuat undangan, baik untuk acara
+                            pernikahan, ulang tahun, atau acara lainnya.
+                        </p>
+                    </div>
+                    <div class="md:w-[25%] lg:w-[20%] md:pl-4">
+                        <p class="font-bold mb-4">Tautan</p>
+                        <div class="flex flex-col gap-1">
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="" class="hover:underline">Panduan pengguna</a>
+                            </p>
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="" class="hover:underline">Jadi Reseller</a>
+                            </p>
+
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="" class="hover:underline">Kebijakan Privasi</a>
+                            </p>
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="" class="hover:underline">Syarat & Ketentuan</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="md:w-[25%] lg:w-[20%] md:pl-4">
+                        <p class="font-bold mb-4">Tetap Terhubung</p>
+                        <div class="flex flex-col gap-1">
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="https://wa.me/6285718823638" target="_blank"
+                                    class="hover:underline">WhatsApp</a>
+                            </p>
+
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="https://www.instagram.com/undangly.app" target="_blank"
+                                    class="hover:underline">Instagram</a>
+                            </p>
+
+
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="mailto:undangly.app@gmail.com" target="_blank"
+                                    class="hover:underline">Email</a>
+                            </p>
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="https://www.facebook.com/profile.php?id=61565833948636" target="_blank"
+                                    class="hover:underline">Facebook</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <p class="font-bold mb-4">Metode Pembayaran</p>
+
+                    <div class="flex flex-wrap gap-4">
+                        @foreach ($payments as $payment)
+                            <img src="{{ $payment }}" class="h-[20px]" />
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="mt-20">
+                    <p class="text-gray-500 leading-[1.8]">
+                        © 2024 Undangly. All rights reserved.
+                    </p>
+
+                </div>
+            </x-atoms.wrapper>
+
+        </footer>
     </div>
 
     {{-- optional named slot scripts --}}
