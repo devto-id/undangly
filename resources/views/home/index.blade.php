@@ -5,7 +5,9 @@
 
         <div class="bg-grid">
             <div class="w-[90%] mx-auto py-4 md:py-8 flex items-center justify-between">
-                <x-atoms.logo-full class="h-[42px]"></x-atoms.logo-full>
+                <a href="{{ url('/') }}">
+                    <x-atoms.logo-full class="h-[42px]"></x-atoms.logo-full>
+                </a>
 
                 <div class="hidden md:flex items-center gap-4">
                     <a href="https://app.undangly.com/theme" class="text-sm font-semibold hover:text-primary py-2 px-2">
@@ -49,7 +51,7 @@
                 </x-atoms.wrapper>
             </section>
 
-            <section class="mt-[-60px]">
+            <section class="mt-[-100px]">
                 <x-atoms.wrapper>
                     <div>
                         <video src="{{ url('/demo.mp4') }}" autoplay muted loop
@@ -59,7 +61,7 @@
             </section>
 
 
-            <section class=" pt-[120px] pb-[60px] mt-[-60px]">
+            <section class="pt-[120px] pb-[60px] mt-[-60px] md:pt-[180px] md:pb-[100px] md:mt-[-100px]">
                 <x-atoms.wrapper>
                     <div class="grid md:grid-cols-3 gap-4">
 

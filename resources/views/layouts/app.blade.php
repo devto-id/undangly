@@ -105,11 +105,17 @@
                                 <a href="" class="hover:underline">Jadi Reseller</a>
                             </p>
 
+
                             <p class="text-gray-500 leading-[1.8]">
-                                <a href="" class="hover:underline">Kebijakan Privasi</a>
+                                <a href="{{ route('terms-and-conditions') }}" class="hover:underline">Terms &
+                                    Conditions</a>
+                            </p>
+
+                            <p class="text-gray-500 leading-[1.8]">
+                                <a href="{{ route('privacy-policy') }}" class="hover:underline">Privacy & Policy</a>
                             </p>
                             <p class="text-gray-500 leading-[1.8]">
-                                <a href="" class="hover:underline">Syarat & Ketentuan</a>
+                                <a href="{{ route('disclaimer') }}" class="hover:underline">Disclaimer</a>
                             </p>
                         </div>
                     </div>
@@ -150,10 +156,12 @@
                     </div>
                 </div>
 
-                <div class="mt-20">
+                <div class="mt-20 flex flex-col md:flex-row items-center justify-between gap-2">
                     <p class="text-gray-500 leading-[1.8]">
                         © 2024 Undangly. All rights reserved.
                     </p>
+
+                    <p class="text-gray-500 leading-[1.8]">Jatisari, Jatiasih, Kota Bekasi, 17426.</p>
 
                 </div>
             </x-atoms.wrapper>
