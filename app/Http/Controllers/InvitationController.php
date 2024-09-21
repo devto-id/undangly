@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Invitation;
+use App\Models\WeddingGuess;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class InvitationController extends Controller
 {
-    public function index($slug)
+    public function index($slug, Request $request)
     {
         Carbon::setLocale('id');
 
@@ -26,6 +27,26 @@ class InvitationController extends Controller
                 'invitable.love_stories'
             ])
             ->firstOrFail();
+
+        $invitation->update([
+            "visit_total" => $invitation->visit_total + 1,
+            "last_visited_at" => now()
+        ]);
+
+        if ($request->get('guess')) {
+            $guess = WeddingGuess::where([
+                "wedding_id" => $invitation->invitable->id,
+                "name" => urldecode($request->get('guess')),
+                "place" => urldecode($request->get('place'))
+            ])->first();
+
+            if ($guess) {
+                $guess->update([
+                    "visit_total" => $invitation->visit_total + 1,
+                    "last_visited_at" => now()
+                ]);
+            }
+        }
 
         $theme = $invitation->theme;
 
