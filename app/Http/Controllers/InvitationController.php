@@ -37,7 +37,7 @@ class InvitationController extends Controller
             $guess = WeddingGuess::where([
                 "wedding_id" => $invitation->invitable->id,
                 "name" => urldecode($request->get('guess')),
-                "place" => urldecode($request->get('place'))
+                "place" => urldecode($request->get('address'))
             ])->first();
 
             if ($guess) {
