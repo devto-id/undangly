@@ -251,30 +251,16 @@
         </x-atoms.wrapper>
         <div class="flex flex-col gap-2 relative">
             <div class="flex gap-2 justify-center overflow-x-hidden">
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/galungan/galungan.webp" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/bonvoyage/bonvoyage.webp" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/colored-beach/colored-beach.webp" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/pelantikan-dewan/pelantikan-dewan.webp" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/betawi-vintage/betawi-vintage.jpg" />
+                @for ($x = 0; $x < 5; $x++)
+                    <img class="w-[25vw] shrink-0 aspect-square bg-gray-100" src="{{ $themes[$x]->thumbnail }}" />
+                @endfor
 
             </div>
 
             <div class="flex gap-2 justify-center overflow-x-hidden ml-[-25vw]">
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/sakura-castle/sakura-castle.jpg" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/wisuda-harmoni/wisuda-harmoni.jpg" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/purple-marble/purple-marble.jpg" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/minimalist-blue/minimalist-blue.jpg" />
-                <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
-                    src="https://satumomen.com/themes/maroon-and-blue/maroon-and-blue.jpg" />
+                @for ($x = 0; $x < 5; $x++)
+                    <img class="w-[25vw] shrink-0 aspect-square bg-gray-100" src="{{ $themes[$x]->thumbnail }}" />
+                @endfor
 
             </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Models\Theme;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,9 +11,9 @@ class HomeController extends Controller
     public function index()
     {
 
-
         return view('home/index', [
             "reviews" => Review::take(30)->get(),
+            "themes" => Theme::inRandomOrder()->take(10)->get()
         ]);
     }
 
