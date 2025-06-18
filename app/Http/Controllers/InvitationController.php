@@ -66,7 +66,7 @@ class InvitationController extends Controller
             $html = preg_replace('/<head>/i', '<head><base href="' . $baseUrl . '">', $html);
         }
 
-        $newTitle = "Undangan Pernikahan {$invitation->invitable->groom_nickname} & {$invitation->invitable->bride_nickname}";
+        $newTitle = "{$invitation->title}";
         $newDescription = [];
 
         if ($invitation->invitable->reception_date) {
