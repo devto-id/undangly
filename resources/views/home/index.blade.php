@@ -266,12 +266,48 @@
                         <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
                             src="{{ $theme->thumbnail }}" />
                     @endforeach
+
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
                 </div>
             </div>
 
 
             <div class="overflow-hidden mt-2">
                 <div class="flex gap-2 animate-marquee-left">
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+
+                    {{-- clone --}}
                     @foreach ($themes as $theme)
                         <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
                             src="{{ $theme->thumbnail }}" />
