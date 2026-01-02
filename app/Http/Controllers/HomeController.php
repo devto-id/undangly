@@ -16,7 +16,8 @@ class HomeController extends Controller
             "reviews" => Review::take(30)->get(),
             "themes" => Theme::inRandomOrder()->take(10)->get(),
 
-            'invitations' => Invitation::with('theme')
+            'invitations' => Invitation::where('status', 'published')
+                ->with('theme')
                 ->with('invitable')
                 ->latest()
                 ->whereNotNull('slug')
