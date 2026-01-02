@@ -19,36 +19,42 @@
     box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
+/* === MARQUEE RIGHT (jalan ke kiri) === */
 @keyframes marquee-right {
     from {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-25%);
     }
 }
 
+/* === MARQUEE LEFT (jalan ke kanan) === */
 @keyframes marquee-left {
     from {
-        transform: translateX(0);
+        transform: translateX(-25%);
     }
     to {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
 }
 
 .animate-marquee-right {
-    animation: marquee-right 40s linear infinite;
+    animation: marquee-right 15s linear infinite;
+    will-change: transform;
 }
 
 .animate-marquee-left {
-    animation: marquee-left 40s linear infinite;
+    animation: marquee-left 15s linear infinite;
+    will-change: transform;
 }
 
+/* Mobile lebih pelan */
 @media (max-width: 768px) {
     .animate-marquee-right,
     .animate-marquee-left {
-        animation-duration: 25s;
+        animation-duration: 30s;
     }
 }
+
 
