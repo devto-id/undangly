@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         return view('home/index', [
             "reviews" => Review::take(30)->get(),
-            "themes" => Theme::inRandomOrder()->take(10)->get(),
+            "themes" => Theme::get(),
 
             'invitations' => Invitation::where('status', 'published')
                 ->with('theme')
