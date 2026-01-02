@@ -309,7 +309,7 @@
 
                             {{-- Preview --}}
                             <div class="relative aspect-[3/4] bg-gray-100 overflow-hidden">
-                                <img src="{{ $invitation->invitable?->cover }}" alt="cover">
+                                <img src="{{ $invitation->invitable?->cover }}" class="h-full w-full object-cover" alt="cover">
                                 {{-- Overlay --}}
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition">
