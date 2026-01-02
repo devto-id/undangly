@@ -18,3 +18,37 @@
 .contact-link:hover .icon{
     box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.5);
 }
+
+@keyframes marquee-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-left {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.animate-marquee-right {
+    animation: marquee-right 40s linear infinite;
+}
+
+.animate-marquee-left {
+    animation: marquee-left 40s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .animate-marquee-right,
+    .animate-marquee-left {
+        animation-duration: 25s;
+    }
+}
+

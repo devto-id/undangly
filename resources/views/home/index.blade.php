@@ -14,6 +14,10 @@
                         Tema Undangan
                     </a>
 
+                    <a href="https://app.undangly.com/portofolio" class="text-sm font-semibold hover:text-primary py-2 px-2">
+                        Portofolio
+                    </a>
+
                     <a href="https://app.undangly.com/login" class="text-sm font-semibold hover:text-primary py-2 px-2">
                         Masuk
                     </a>
@@ -250,20 +254,36 @@
 
         </x-atoms.wrapper>
         <div class="flex flex-col gap-2 relative">
-            <div class="flex gap-2 justify-center overflow-x-hidden">
-                @for ($x = 0; $x < 5; $x++)
-                    <img class="w-[25vw] shrink-0 aspect-square bg-gray-100" src="{{ $themes[$x]->thumbnail }}" />
-                @endfor
+            <div class="overflow-hidden">
+                <div class="flex gap-2 animate-marquee-right">
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
 
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+                </div>
             </div>
 
-            <div class="flex gap-2 justify-center overflow-x-hidden ml-[-25vw]">
-                @for ($x = 0; $x < 5; $x++)
-                    <img class="w-[25vw] shrink-0 aspect-square bg-gray-100" src="{{ $themes[$x]->thumbnail }}" />
-                @endfor
 
+            <div class="overflow-hidden mt-2">
+                <div class="flex gap-2 animate-marquee-left">
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+
+                    {{-- clone --}}
+                    @foreach ($themes as $theme)
+                        <img class="w-[25vw] shrink-0 aspect-square bg-gray-100"
+                            src="{{ $theme->thumbnail }}" />
+                    @endforeach
+                </div>
             </div>
-
             <div
                 class="absolute z-[2] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] shadow-[0_0_20px_20px__rgba(255,255,255,1)]  md:shadow-[0_0_50px_50px__rgba(255,255,255,1)] rounded-xl">
                 <a href="https://app.undangly.com/theme"
@@ -273,8 +293,59 @@
             </div>
         </div>
     </section>
-
+    
     <section class="mt-[60px]">
+        <x-atoms.wrapper>
+            <div>
+                <h2 class="text-4xl font-extrabold text-center mb-12">
+                    Ratusan portofolio undangan keren.
+                </h2>
+
+                {{-- Grid Portfolio --}}
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    @foreach ($invitations->take(12) as $invitation)
+                        <div
+                            class="group flex flex-col bg-white rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden">
+
+                            {{-- Preview --}}
+                            <div class="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+                                <img src="{{ $invitation->invitable?->cover }}" alt="cover">
+                                {{-- Overlay --}}
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition">
+                                </div>
+                            </div>
+
+                            {{-- Content --}}
+                            <div class="p-4 flex flex-col">
+                                <h3 class="font-semibold text-lg line-clamp-1">
+                                    {{ $invitation->title }}
+                                </h3>
+                                <h4 class="font-semibold text-gray-500 text-base mb-4 line-clamp-1">
+                                    Theme - {{ $invitation->theme?->title }}
+                                </h4>
+                                <a href="https://undangly.com/{{ $invitation->slug }}"
+                                    target="_blank"
+                                    class="inline-flex justify-center items-center px-4 py-2 rounded-lg bg-black text-white text-sm font-semibold hover:bg-gray-700 transition">
+                                    Lihat Undangan
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                {{-- CTA --}}
+                <div class="flex justify-center mt-12">
+                    <a href="https://app.undangly.com/portfolio"
+                        class="inline-flex px-6 py-3 rounded-xl bg-black text-white font-semibold hover:bg-gray-700 transition">
+                        Jelajahi Portofolio
+                    </a>
+                </div>
+            </div>
+        </x-atoms.wrapper>
+    </section>
+
+    <section class="mt-[120px]">
         <x-atoms.wrapper>
             <div>
                 <h2 class="text-4xl font-extrabold text-center mb-10">

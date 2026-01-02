@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Review;
 use App\Models\Theme;
+use App\Models\Review;
+use App\Models\Invitation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,14 @@ class HomeController extends Controller
 
         return view('home/index', [
             "reviews" => Review::take(30)->get(),
-            "themes" => Theme::inRandomOrder()->take(10)->get()
+            "themes" => Theme::inRandomOrder()->take(10)->get(),
+
+            'invitations' => Invitation::with('theme')
+                ->with('invitable')
+                ->latest()
+                ->whereNotNull('slug')
+                ->limit(12)
+                ->get(),
         ]);
     }
 
